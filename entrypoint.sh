@@ -35,6 +35,7 @@ if [ "$?" -ne 0 ]; then
 	echo "$REPORT"
 	exit 1
 fi
+echo "Report: $REPORT"
 
 #
 # Minimize JSON
