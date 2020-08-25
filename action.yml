@@ -1,8 +1,5 @@
 name: 'LicenseFinder Action'
 description: 'Verify permitted 3rd-party licenses'
-outputs:
-  license_report_json:
-    description: "JSON report of violations"
 runs:
   using: 'docker'
   image: 'Dockerfile'
