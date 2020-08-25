@@ -29,7 +29,7 @@ fi
 # This inspects all the dependencies, and determines their version and licenses
 # JSON output is used for further steps to consume
 #
-REPORT=$(license_finder report --format json)
+REPORT=$(license_finder --format json)
 if [ "$?" -ne 0 ]; then
 	echo "Could not run the report tool!"
 	echo "$REPORT"
