@@ -1,18 +1,11 @@
 name: 'LicenseFinder Action'
-description: 'Check if any license in use require approval'
+description: 'Verify permitted 3rd-party licenses'
 outputs:
   license_report_json:
-    description: "A report about licenses in JSON"
-inputs:
-  package_manager:
-    description: 'Which package manager to check (comma separated)'
-    required: true
-    default: 'bundler'
+    description: "JSON report of violations"
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-  - ${{ inputs.package_manager }}
 branding:
   icon: 'file-text'  
   color: 'purple'
