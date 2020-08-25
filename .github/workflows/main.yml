@@ -17,4 +17,4 @@ jobs:
       if: failure()
       with:
         name: license_finder.log
-        path: ${{ github.workspace }}/output/license_finder.log
+        path: ${{ github.workspace }}/license_finder.log
