@@ -28,7 +28,7 @@ bundle list license_finder
 REPORT=$(license_finder)
 if [ "$?" -ne 0 ]; then
   echo "$REPORT"
-	echo "$REPORT" > /license_finder.log
+	echo "$REPORT" > output/license_finder.log
 
 	exit 1
 fi

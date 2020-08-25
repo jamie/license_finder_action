@@ -18,3 +18,4 @@ jobs:
       with:
         name: license_finder.log
         path: output/license_finder.log
+        if-no-files-found: ignore
