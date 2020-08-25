@@ -6,7 +6,6 @@ WORKDIR /var/license_action/
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 
-COPY script.sh script.sh
+COPY entrypoint.sh entrypoint.sh
 
-ENTRYPOINT ["/var/license_action/script.sh"]
-
+ENTRYPOINT ["/var/license_action/entrypoint.sh"]
