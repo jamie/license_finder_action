@@ -23,20 +23,12 @@ if [ "$?" -ne 0 ]; then
 	exit 1
 fi
 
+bundle list license_finder
 
-REPORT=$(license_finder --format json)
+REPORT=$(license_finder)
 if [ "$?" -ne 0 ]; then
-	echo "Could not run the report tool!"
-	echo "$REPORT"
-
-	# Minimize JSON
-	# Remove all output until the start of the JSON (I.E. "{" char)
-	# Base64 is used to ensure we don't have issues with special characters
-	# Condense to a single line
-	REPORT=$(echo $REPORT | sed 's/[^{]*{/{/' | base64 | tr -d '\n')
-
-	# Special output for Github Actions to read the value
-	echo "##[set-output name=license_report_json;]$REPORT"
+  echo "$REPORT"
+	echo "$REPORT" > /license_finder.log
 
 	exit 1
 fi
