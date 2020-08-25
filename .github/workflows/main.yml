@@ -15,5 +15,4 @@ jobs:
       id: license-check
       with:
         package_manager: 'bundler'
-      uses: jamie/license_finder_action@master
-
+      uses: jamie/license_finder_action@ruby-bump
